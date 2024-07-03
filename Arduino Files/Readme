@@ -1,18 +1,18 @@
-#README: Arduino Files for ESP32 Integrated with Sensors
-#Overview
+README: Arduino Files for ESP32 Integrated with Sensors
+Overview
 This repository contains Arduino sketch files for interfacing an ESP32 microcontroller with various sensors. The code provided here demonstrates how to read data from sensors connected to the ESP32, process the data, and optionally transmit it to other devices or platforms.
 
-#Requirements
+Requirements
   a) Arduino IDE (or compatible IDE such as PlatformIO)
   b) ESP32 development board (e.g., ESP-WROOM-32)
   c) Sensors compatible with ESP32 (e.g., temperature, humidity, motion sensors)
   d) Necessary libraries for sensor interfacing (details provided in individual sketch files)
 
-#Files Included
+Files Included
   a) Sketch files (.ino): Each .ino file corresponds to a specific sensor or sensor combination setup.
   b) README.md: This file provides an overview of the repository and instructions for usage.
 
-#Getting Started
+Getting Started
   a) Setting Up Arduino IDE:
       Install the Arduino IDE from Arduino's official website.
       Add support for ESP32 boards in the Arduino IDE (instructions available on the ESP32 GitHub repository).
@@ -37,12 +37,12 @@ This repository contains Arduino sketch files for interfacing an ESP32 microcont
       Modify the sketch files to suit additional sensors or different data processing requirements.
       Expand functionality by integrating with external platforms or adding more sensors as needed.
 
-#Troubleshooting
+Troubleshooting
   a) If encountering issues during compilation or upload, ensure all libraries are up-to-date and compatible with your ESP32 board.
   b) Double-check wiring connections and configurations against the specifications in the .ino file.
 
-#License
+License
 This repository is licensed under the MIT License. See the LICENSE file for more details.
 
-#Support and Contributions
+Support and Contributions
 For questions, bug reports, or contributions, please submit an issue or pull request through GitHub.

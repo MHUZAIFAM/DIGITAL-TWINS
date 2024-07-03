@@ -1,5 +1,5 @@
-# README: Arduino Files for ESP32 Integrated with Sensors
-# Overview
+Arduino Files for ESP32 Integrated with Sensors
+Overview
 This repository contains Arduino sketch files for interfacing an ESP32 microcontroller with various sensors. The code provided here demonstrates how to read data from sensors connected to the ESP32, process the data, and optionally transmit it to other devices or platforms.
 
 Requirements

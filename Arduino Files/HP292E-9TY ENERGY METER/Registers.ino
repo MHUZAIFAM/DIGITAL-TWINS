@@ -15,6 +15,8 @@ float Sa = 0, Sb = 0, Sc = 0, St = 0;          // Apparent Power
 float PFa = 0, PFb = 0, PFc = 0, PFt = 0;      // Power Factor
 float bAud = 0;                                // Baud Rate
 float FREQ= 0;                                 // Frequency
+float THD_Ua = 0, THD_Uc = 0, THD_Uc = 0;      //THD Voltages
+float THD_Ia = 0, THD_Ib = 0, THD_Ic = 0;      //THD Current
 
 // Defining buffers
 //--------------------------------PHASE VOlTAGRES---------------------------------
@@ -50,7 +52,7 @@ uint8_t sendBuffer_Pb[8] = {0x01, 0x03, 0x00, 0x31, 0x00, 0x01, 0xD5, 0xC5};
 //PC CRC-16 (Modbus)	0xC525
 uint8_t sendBuffer_Pc[8] = {0x01, 0x03, 0x00, 0x32, 0x00, 0x01, 0x25, 0xC5};
 
-//--------------------------------TOTAL ACTIVE POWER------------------------------
+//--------------------------------TOTAL ACTIVE POWER-------------------------------
 //PT CRC-16 (Modbus)	0x0574
 uint8_t sendBuffer_Pt[8] = {0x01, 0x03, 0x00, 0x33, 0x00, 0x01, 0x74, 0x05};
 
@@ -66,7 +68,7 @@ uint8_t sendBuffer_Qc[8] = {0x01, 0x03, 0x00, 0x36, 0x00, 0x01, 0x64, 0x04};
 //QT CRC-16 (Modbus)	0xC435
 uint8_t sendBuffer_Qt[8] = {0x01, 0x03, 0x00, 0x37, 0x00, 0x01, 0x35, 0xC4};
 
-//--------------------------------APPARENT POWERS---------------------------------
+//--------------------------------APPARENT POWERS--------------------------------
 //SA CRC-16 (Modbus)	0xC705
 uint8_t sendBuffer_Sa[8] = {0x01, 0x03, 0x00, 0x38, 0x00, 0x01, 0x05, 0xC7};
 //SB CRC-16 (Modbus)	0x0754
@@ -74,7 +76,7 @@ uint8_t sendBuffer_Sb[8] = {0x01, 0x03, 0x00, 0x39, 0x00, 0x01, 0x54, 0x07};
 //SC CRC-16 (Modbus)	0x07A4
 uint8_t sendBuffer_Sc[8] = {0x01, 0x03, 0x00, 0x3A, 0x00, 0x01, 0xA4, 0x07};
 
-//--------------------------------TOTAL APPARENT POWER----------------------------
+//--------------------------------TOTAL APPARENT POWER---------------------------
 //ST CRC-16 (Modbus)	0xC7F5
 uint8_t sendBuffer_St[8] = {0x01, 0x03, 0x00, 0x3B, 0x00, 0x01, 0xF5, 0xC7};
 
@@ -98,3 +100,18 @@ uint8_t sendBuffer_FREQ[8] = {0x01, 0x03, 0x00, 0x40, 0x00, 0x01, 0x85, 0xDE};
 //bAud CRC-16 (Modbus)	0xC075
 uint8_t sendBuffer_bAud[8] = {0x01, 0x03, 0x00, 0x23, 0x00, 0x01, 0x75, 0xC0};
 
+//-------------------------------THD(HARMONICS) VOLTAGES---------------------------
+//THD_Ua CRC-16 (Modbus)	0x3404
+uint8_t sendBuffer_THD_Ua[8] = {0x01, 0x03, 0x01, 0x08, 0x00, 0x01, 0x04, 0x34};
+//THD_Ub CRC-16 (Modbus)	0xF455
+uint8_t sendBuffer_THD_Ub[8] = {0x01, 0x03, 0x01, 0x09, 0x00, 0x01, 0x55, 0xF4};
+//THD_Uc CRC-16 (Modbus)	0xF4A5
+uint8_t sendBuffer_THD_Uc[8] = {0x01, 0x03, 0x01, 0x0A, 0x00, 0x01, 0xA5, 0xF4};
+
+//-------------------------------THD(HARMONICS) CURRENTS---------------------------
+//THD_Ia CRC-16 (Modbus)	0x34F4
+uint8_t sendBuffer_THD_Ia[8] = {0x01, 0x03, 0x01, 0x0B, 0x00, 0x01, 0xF4, 0x34};
+//THD_Ib CRC-16 (Modbus)	0xF545
+uint8_t sendBuffer_THD_Ib[8] = {0x01, 0x03, 0x01, 0x0C, 0x00, 0x01, 0x45, 0xF5};
+//THD_Ic CRC-16 (Modbus)	0x3514
+uint8_t sendBuffer_THD_Ic[8] = {0x01, 0x03, 0x01, 0x0D, 0x00, 0x01, 0x14, 0x35};

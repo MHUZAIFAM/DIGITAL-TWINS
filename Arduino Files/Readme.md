@@ -3,7 +3,6 @@
 This repository contains Arduino sketch files for interfacing an ESP32 microcontroller with various sensors. The code provided here demonstrates how to read data from sensors connected to the ESP32, process the data, and optionally transmit it to other devices or platforms.
 
 # Requirements
-
  a) Arduino IDE (or compatible IDE such as PlatformIO)
 
  b) ESP32 development board (e.g., ESP-WROOM-32)
